@@ -53,24 +53,24 @@ subprojects {
         from(sourceSets.main.get().allSource)
     }
 
-    publishing {
-        repositories {
-            maven {
-                name = "eutroDev"
-                url = uri("https://maven.eutro.dev/releases")
-                credentials(PasswordCredentials::class)
-                authentication {
-                    create<BasicAuthentication>("basic")
-                }
-            }
-        }
-        publications {
-            register<MavenPublication>("maven") {
-                from(components.named("java").get())
-                artifact(tasks["sourceJar"])
-            }
-        }
-    }
+    // publishing {
+    //     repositories {
+    //         maven {
+    //             name = "eutroDev"
+    //             url = uri("https://maven.eutro.dev/releases")
+    //             credentials(PasswordCredentials::class)
+    //             authentication {
+    //                 create<BasicAuthentication>("basic")
+    //             }
+    //         }
+    //     }
+    //     publications {
+    //         register<MavenPublication>("maven") {
+    //             from(components.named("java").get())
+    //             artifact(tasks["sourceJar"])
+    //         }
+    //     }
+    // }
 }
 
 project(":jwasm-analysis") {
