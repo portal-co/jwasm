@@ -53,6 +53,12 @@ subprojects {
         from(sourceSets.main.get().allSource)
     }
 
+    publishing{
+        repositories{
+            mavenLocal()
+        }
+    }
+
     // publishing {
     //     repositories {
     //         maven {
