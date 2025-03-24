@@ -11,7 +11,7 @@ tasks.jar {
 }
 
 allprojects {
-    group = "io.github.eutro.jwasm"
+    group = "com.github.portal-co.jwasm"
     version = "${properties["ver_major"]}.${properties["ver_minor"]}.${properties["ver_patch"]}"
 }
 
