@@ -57,6 +57,12 @@ subprojects {
         repositories{
             mavenLocal()
         }
+                publications {
+            register<MavenPublication>("maven") {
+                from(components.named("java").get())
+                artifact(tasks["sourceJar"])
+            }
+        }
     }
 
     // publishing {
